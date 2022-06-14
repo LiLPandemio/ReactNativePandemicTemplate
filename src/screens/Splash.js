@@ -1,7 +1,7 @@
-import { View, Text } from 'react-native'
-import React from 'react'
+import { View, Text } from 'react-native'               //Basic react native components
+import React from 'react'                               //React import
 
-const Splash = () => {
+const Splash = () => {                                  //Screen component
     return (
         <View>
             <Text>Splash</Text>
@@ -9,4 +9,4 @@ const Splash = () => {
     )
 }
 
-export default Splash
+export default Splash                                   //Export the component to be used in the app

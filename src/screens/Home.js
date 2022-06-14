@@ -1,7 +1,7 @@
-import { View, Text } from 'react-native'
-import React from 'react'
+import { View, Text } from 'react-native' //Basic react native components
+import React from 'react' //React import
 
-const Home = () => {
+const Home = () => { //Template screen component
     return (
         <View>
             <Text>Home</Text>
@@ -9,4 +9,4 @@ const Home = () => {
     )
 }
 
-export default Home
+export default Home //Export the component to be used in the app

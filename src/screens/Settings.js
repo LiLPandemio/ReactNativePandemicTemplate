@@ -1,7 +1,7 @@
-import { View, Text } from 'react-native'
-import React from 'react'
+import { View, Text } from 'react-native' //Basic react native components
+import React from 'react' //React import
 
-const Settings = () => {
+const Settings = () => { //Template screen component
     return (
         <View>
             <Text>Settings</Text>
@@ -9,4 +9,4 @@ const Settings = () => {
     )
 }
 
-export default Settings
+export default Settings //Export the component to be used in the app

@@ -1,11 +1,11 @@
-import { View, Text } from 'react-native'
-import React from 'react'
-import { createStackNavigator, TransitionPresets } from '@react-navigation/stack';
-import Home from "../screens/Home"
+import { View, Text } from 'react-native' //Basic react native components
+import React from 'react' //React import
+import { createStackNavigator, TransitionPresets } from '@react-navigation/stack'; //Import the stack navigator
+import Home from "../screens/Home" //Import the home screen for the stack navigator
 
 const Stack = createStackNavigator();  //Creating the stack navigator.
 
-function HomeStack() {
+function HomeStack() { //Home stack navigator component
     return (
         <Stack.Navigator
             initialRouteName="Home"

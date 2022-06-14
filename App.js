@@ -28,10 +28,11 @@ import { login, checkTokenStatus } from './src/functions/auth';
 
 const App = () => {
   const isDebugging = false; //Enabling this will redirect the app to the DebugStack.
-  const [Theme, setTheme] = React.useState(DarkTheme);
-  const [isLoading, setIsLoading] = React.useState(true);              //This will define loading status, when it's switched on or off it will show or not the Splash screen
-  const [IsLoggedIn, setIsLoggedIn] = React.useContext(AuthContext);  //A context that will define the authentication status, if false, will show auth stack, else will show home stack
+  const [Theme, setTheme] = React.useState(DarkTheme);                      //Default theme will be DarkTheme, This state will define the app theme.
+  const [isLoading, setIsLoading] = React.useState(true);                   //This will define loading status, when it's switched on or off it will show or not the Splash screen
+  const [IsLoggedIn, setIsLoggedIn] = React.useContext(AuthContext);        //A context that will define the authentication status, if false, will show auth stack, else will show home stack
 
+  //Loads the token and shows the Splash until app is loaded
   React.useEffect(() => {
     async function checkToken() {
       let isTokenValid = await checkTokenStatus();
@@ -71,6 +72,7 @@ const App = () => {
 }
 
 function ContextedApp({ children }) {
+  //With this context you can provide dynamic login stacks and screens.
   return (
     <AuthProvider>
       <App></App>

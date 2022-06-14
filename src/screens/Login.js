@@ -1,7 +1,7 @@
-import { View, Text } from 'react-native'
-import React, { useContext } from 'react'
+import { View, Text } from 'react-native' //Basic react native components
+import React, { useContext } from 'react' //React import
 
-const Login = () => {
+const Login = () => { //Template screen component
     return (
         <View>
             <Text>Login</Text>
@@ -9,4 +9,4 @@ const Login = () => {
     )
 }
 
-export default Login
+export default Login //Export the component to be used in the app

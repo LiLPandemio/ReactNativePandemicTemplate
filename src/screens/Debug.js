@@ -1,3 +1,4 @@
+//THIS IS A DEBUG SCREEN, THE PURPOSE IS TO TEST THE COMPONENTS. AN EXAMPLE OF HOW TO CHANGE THE THEME IS ALSO HERE.
 import { View, Text } from 'react-native'
 import React from 'react'
 import { ThemeContext } from '../contexts/ThemeContext'
