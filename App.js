@@ -24,13 +24,28 @@ import DebugStack from './src/navigations/DebugStack';
 //Splash screen shown while app is loading authentication status and preferences.
 import Splash from "./src/screens/Splash"
 
-import { login, isLoggedIn } from './src/functions/auth';
+import { login, checkTokenStatus } from './src/functions/auth';
 
 const App = () => {
   const isDebugging = false; //Enabling this will redirect the app to the DebugStack.
   const [Theme, setTheme] = React.useState(DarkTheme);
   const [isLoading, setIsLoading] = React.useState(true);              //This will define loading status, when it's switched on or off it will show or not the Splash screen
-  const { IsLoggedIn, setIsLoggedIn } = React.useContext(AuthContext);  //A context that will define the authentication status, if false, will show auth stack, else will show home stack
+  const [IsLoggedIn, setIsLoggedIn] = React.useContext(AuthContext);  //A context that will define the authentication status, if false, will show auth stack, else will show home stack
+
+  React.useEffect(() => {
+    async function checkToken() {
+      let isTokenValid = await checkTokenStatus();
+      if (isTokenValid) {
+        setIsLoading(false);
+        setIsLoggedIn(true);
+      } else {
+        setIsLoggedIn(false);
+        setIsLoading(false);
+      }
+    };
+    checkToken();
+  }, [])
+
 
   //*Memorize the functions to change the theme dynamically. This could be used anywhere in the project
   const userTheme = React.useMemo(

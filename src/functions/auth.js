@@ -17,7 +17,7 @@ export async function login(username, password) {
  * Use this function to check the token status.
  * @returns True or False
  */
-export async function isLoggedIn(token) {
+export async function checkTokenStatus() {
     /**
      * Type here your login logic. This is a placeholder function!
      */
