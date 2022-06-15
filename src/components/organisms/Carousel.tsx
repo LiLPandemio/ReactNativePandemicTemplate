@@ -1,6 +1,6 @@
 import React from 'react'
 import { View, ScrollView, StyleSheet } from 'react-native'
-import { Button, Text, FAB } from 'react-native-paper';
+import { Button, Text, FAB, TextInput, RadioButton, Badge, Divider, Chip } from 'react-native-paper';
 import { LightCandy, DarkCandy, DarkSea, DarkTheme, LightSea, LightTheme, Spotify } from '../../themes/themes'
 import { ThemeContext } from '../../contexts/ThemeContext';
 
@@ -18,15 +18,39 @@ const Slide = (props: any) => {
     const { title, theme } = props;
 
     return (
-        <View style={{ backgroundColor: theme.colors.background, ...styles.slide }}>
+        <View style={{ flexDirection: 'column', backgroundColor: theme.colors.background, ...styles.slide }}>
             <Text theme={theme} style={{ ...styles.slideText }}>
                 {title}
             </Text>
             <Button style={{ marginTop: 5 }} onPress={() => { }} mode='text' theme={theme}>Normal Button</Button>
             <Button style={{ marginTop: 5 }} onPress={() => { }} mode='outlined' theme={theme}>Outlined Button</Button>
             <Button style={{ marginTop: 5 }} onPress={() => { }} mode='contained' theme={theme}>Outlined Button</Button>
+            <Divider theme={theme} style={{ backgroundColor: theme.colors.primary, }} />
+            <TextInput style={{ width: "95%", marginTop: 5 }} label="outlined" theme={theme} mode={"outlined"}></TextInput>
+            <TextInput style={{ width: "95%", marginTop: 5 }} label="flat" theme={theme} mode={"flat"}></TextInput>
+            <View style={{ width: "50%", marginTop: 5, flexDirection: 'row' }}>
+                <Text theme={theme}>Checked</Text>
+                <RadioButton theme={theme} status='checked' value="first" />
+            </View>
+            <View style={{ width: "50%", marginTop: 5, flexDirection: 'row' }}>
+                <Text theme={theme}>Unchecked</Text>
+                <RadioButton theme={theme} status='unchecked' value="first" />
+            </View>
+            <View style={{ flexDirection: "row", marginTop: 10, width: "100%" }}>
+                <Badge theme={theme} style={{ backgroundColor: theme.colors.primary }}>Here</Badge>
+                <Badge theme={theme} style={{ backgroundColor: theme.colors.primary, marginLeft: 1 }}>You</Badge>
+                <Badge theme={theme} style={{ backgroundColor: theme.colors.primary, marginLeft: 1 }}>See</Badge>
+                <Badge theme={theme} style={{ backgroundColor: theme.colors.primary, marginLeft: 1 }}>Some</Badge>
+                <Badge theme={theme} style={{ backgroundColor: theme.colors.primary, marginLeft: 1 }}>Badges!</Badge>
+            </View>
+            <View style={{ marginTop: 10 }}>
+                <Chip mode='flat' onPress={() => { }} selectedColor={theme.colors.primary} theme={theme} icon="information" style={{ margin: 5 }}>Chips</Chip>
+                <Chip mode='outlined' onPress={() => { }} selectedColor={theme.colors.primary} theme={theme} selected={true} icon="information" style={{ margin: 5 }}>Are</Chip>
+                <Chip mode='flat' onPress={() => { }} selectedColor={theme.colors.primary} theme={theme} selected={true} icon="information" style={{ margin: 5 }}>Buttons like badges!</Chip>
+            </View>
             <FAB
                 theme={theme}
+                label="APPLY"
                 icon="check"
                 style={styles.fab}
                 onPress={() => { setTheme(theme) }}
