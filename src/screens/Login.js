@@ -1,10 +1,11 @@
-import { View, Text } from 'react-native' //Basic react native components
+import { Text } from 'react-native-paper';
+import { View } from 'react-native' //Basic react native components
 import React, { useContext } from 'react' //React import
-
+import ThemeChangeButtonCircle from '../components/organisms/ThemeChangeButtonCircle';
 const Login = () => { //Template screen component
     return (
         <View>
-            <Text>Login</Text>
+            <ThemeChangeButtonCircle navigateTo={"ThemeRoom"}></ThemeChangeButtonCircle>
         </View>
     )
 }

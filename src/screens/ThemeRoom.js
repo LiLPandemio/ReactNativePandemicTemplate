@@ -1,12 +1,18 @@
-//THIS IS A DEBUG SCREEN, THE PURPOSE IS TO TEST THE COMPONENTS. AN EXAMPLE OF HOW TO CHANGE THE THEME IS ALSO HERE.
+/**
+ * This screen is used to switch themes.
+ * Inspired by https://betterprogramming.pub/build-an-image-carousel-in-react-native-5ce5d6b58e24
+ */
 import { Text } from 'react-native-paper';
 import { View } from 'react-native'
 import React from 'react'
+
 import { ThemeContext } from '../contexts/ThemeContext'
 import { LightCandy } from '../themes/themes'
-import { Button } from 'react-native-paper'
 
-const Debug = () => {
+
+
+const ThemeRoom = () => {
+
     const { setTheme, Theme } = React.useContext(ThemeContext);
     const preferences = React.useMemo(
         () => ({
@@ -15,13 +21,12 @@ const Debug = () => {
         }),
         [setTheme, Theme]
     );
+
     return (
         <View>
-            <Text>Debug</Text>
-            <Button onPress={() => { setTheme(LightCandy) }}>Switch theme!</Button>
-            <Button onPress={() => { console.log(Theme.themeName) }}>Check Theme Name</Button>
+            <Text>ThemeRoom</Text>
         </View>
     )
 }
 
-export default Debug
+export default ThemeRoom

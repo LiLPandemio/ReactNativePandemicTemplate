@@ -1,4 +1,5 @@
-import { View, Text } from 'react-native'
+import { Text } from 'react-native-paper';
+import { View } from 'react-native'
 import React from 'react'
 import { createStackNavigator, TransitionPresets } from '@react-navigation/stack';
 import Debug from "../screens/Debug"

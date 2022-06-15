@@ -1,4 +1,5 @@
-import { View, Text } from 'react-native'               //Basic react native components
+import { Text } from 'react-native-paper';
+import { View } from 'react-native'               //Basic react native components
 import React from 'react'                               //React import
 
 const Template = () => {                                //Template screen component
