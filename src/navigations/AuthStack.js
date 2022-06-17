@@ -13,8 +13,8 @@ function AuthStack() {
             initialRouteName="Login"
             headerShown={false}
         >
-            <Stack.Screen name="Login" component={Login} />
-            <Stack.Screen name="ThemeRoom" component={ThemeRoom} />
+            <Stack.Screen options={{ headerShown: false }} name="Login" component={Login} />
+            <Stack.Screen options={{ title: "Theme picker" }} name="ThemeRoom" component={ThemeRoom} />
         </Stack.Navigator>
     );
 }
