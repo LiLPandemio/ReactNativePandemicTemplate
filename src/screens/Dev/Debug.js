@@ -2,8 +2,8 @@
 import { Text } from 'react-native-paper';
 import { View } from 'react-native'
 import React from 'react'
-import { ThemeContext } from '../contexts/ThemeContext'
-import { LightCandy } from '../themes/themes'
+import { ThemeContext } from '../../contexts/ThemeContext'
+import { LightCandy } from '../../themes/themes'
 import { Button } from 'react-native-paper'
 
 const Debug = () => {

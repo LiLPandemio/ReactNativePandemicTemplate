@@ -37,13 +37,15 @@ const App = () => {
     async function checkToken() {
       let isTokenValid = await checkTokenStatus();
       getToken();
-      if (isTokenValid) {
-        setIsLoading(false);
-        setIsLoggedIn(true);
-      } else {
-        setIsLoggedIn(false);
-        setIsLoading(false);
-      }
+      setTimeout(() => {
+        if (isTokenValid) {
+          setIsLoading(false);
+          setIsLoggedIn(true);
+        } else {
+          setIsLoggedIn(false);
+          setIsLoading(false);
+        }
+      }, 1000);
     };
     checkToken();
   }, [])

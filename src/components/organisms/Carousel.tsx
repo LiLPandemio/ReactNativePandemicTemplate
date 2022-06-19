@@ -2,7 +2,7 @@ import React from 'react'
 import { View, ScrollView, StyleSheet } from 'react-native'
 import { Button, Text, FAB, TextInput, RadioButton, Badge, Divider, Chip } from 'react-native-paper';
 import { LightCandy, DarkCandy, DarkSea, DarkTheme, LightSea, LightTheme, Spotify } from '../../themes/themes'
-import { ThemeContext } from '../../contexts/ThemeContext';
+import { ThemeContext } from "../../contexts/ThemeContext";
 
 const Slide = (props: any) => {
 

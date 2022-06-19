@@ -1,8 +1,8 @@
 import { Text, TextInput, Button } from 'react-native-paper';
 import { View, StyleSheet, Image, KeyboardAvoidingView } from 'react-native' //Basic react native components
 import React, { useContext, useState } from 'react' //React import
-import ThemeChangeButtonCircle from '../components/organisms/ThemeChangeButtonCircle';
-import AuthProvider, { AuthContext } from '../contexts/AuthContext';
+import ThemeChangeButtonCircle from '../../components/organisms/ThemeChangeButtonCircle';
+import AuthProvider, { AuthContext } from '../../contexts/AuthContext';
 
 
 const Login = () => { //Template screen component
@@ -11,7 +11,7 @@ const Login = () => { //Template screen component
         <KeyboardAvoidingView style={{ height: "100%" }}>
             <View style={styles.Screen}>
                 <View style={styles.Container}>
-                    <Image style={styles.Logo} source={require('../assets/images/logo.png')} ></Image>
+                    <Image style={styles.Logo} source={require('../../assets/images/logo.png')} ></Image>
                     <TextInput mode={"outlined"} style={styles.TextInput} label={"Username"}></TextInput>
                     <TextInput mode={"outlined"} style={styles.TextInput} label={"Password"}></TextInput>
                     <Button style={{ marginTop: 5 }} onPress={() => { }} mode='contained'>Login</Button>

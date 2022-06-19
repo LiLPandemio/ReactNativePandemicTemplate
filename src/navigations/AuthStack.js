@@ -2,7 +2,7 @@ import { Text } from 'react-native-paper';
 import { View } from 'react-native'
 import React from 'react'
 import { createStackNavigator, TransitionPresets } from '@react-navigation/stack';
-import Login from "../screens/Login"
+import Login from "../screens/Auth/Login"
 import ThemeRoom from '../screens/Demo/ThemeRoom';
 
 const Stack = createStackNavigator();  //Creating the stack navigator.
