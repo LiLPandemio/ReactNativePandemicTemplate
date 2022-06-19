@@ -1,3 +1,6 @@
+/**
+ * This file contains authentication related functions to use on the project, you also have some placeholders ready to update and use.
+ */
 import { Text } from 'react-native-paper';
 import { View } from 'react-native'
 import React from 'react'

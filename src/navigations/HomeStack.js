@@ -1,3 +1,6 @@
+/**
+ * This file contains the stack navigator for the main content. If user is authenticated, this file will be used as main stack, else will be the auth stack
+ */
 import { Text } from 'react-native-paper';
 import { View } from 'react-native' //Basic react native components
 import React from 'react' //React import

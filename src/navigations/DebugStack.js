@@ -1,3 +1,6 @@
+/**
+ * This file contains the stack navigator for debugging purposes. if debug mode is enabled you will use this stack by default. Check App.js to change this.
+ */
 import { Text } from 'react-native-paper';
 import { View } from 'react-native'
 import React from 'react'
