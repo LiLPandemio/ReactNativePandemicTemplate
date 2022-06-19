@@ -1,0 +1,1 @@
+Here you have a default themes file, it contains various themes but you can create another and rewite them as you want.

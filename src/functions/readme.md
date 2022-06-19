@@ -1,0 +1,2 @@
+# What is this?
+Here you can find client backend functions to request information and negotiate with the server. You should create a file for each case, you can for example create a content.js that contains functions to retrieve content.
