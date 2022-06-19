@@ -3,7 +3,7 @@ import { View } from 'react-native'
 import React from 'react'
 import { createStackNavigator, TransitionPresets } from '@react-navigation/stack';
 import Login from "../screens/Login"
-import ThemeRoom from '../screens/ThemeRoom';
+import ThemeRoom from '../screens/Demo/ThemeRoom';
 
 const Stack = createStackNavigator();  //Creating the stack navigator.
 

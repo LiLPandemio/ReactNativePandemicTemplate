@@ -5,9 +5,9 @@
 import { Button, Text } from 'react-native-paper';
 import { View, StyleSheet } from 'react-native'
 import React from 'react'
-import { ThemeContext } from '../contexts/ThemeContext'
-import { LightCandy, DarkCandy, DarkSea, DarkTheme, LightSea, LightTheme, Spotify } from '../themes/themes'
-import Carousel from '../components/organisms/Carousel';
+import { ThemeContext } from '../../contexts/ThemeContext'
+import { LightCandy, DarkCandy, DarkSea, DarkTheme, LightSea, LightTheme, Spotify } from '../../themes/themes'
+import Carousel from '../../components/organisms/Carousel';
 
 // <Button onPress={() => { setTheme(LightCandy) }}>Set theme LightCandy</Button>
 

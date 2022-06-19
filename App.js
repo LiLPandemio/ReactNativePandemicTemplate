@@ -22,9 +22,9 @@ import HomeStack from './src/navigations/HomeStack';
 import DebugStack from './src/navigations/DebugStack';
 
 //Splash screen shown while app is loading authentication status and preferences.
-import Splash from "./src/screens/Splash"
+import Splash from "./src/screens/Auth/Splash"
 
-import { login, checkTokenStatus } from './src/functions/auth';
+import { login, checkTokenStatus, getToken } from './src/functions/auth';
 
 const App = () => {
   const isDebugging = false; //Enabling this will redirect the app to the DebugStack.
@@ -36,6 +36,7 @@ const App = () => {
   React.useEffect(() => {
     async function checkToken() {
       let isTokenValid = await checkTokenStatus();
+      getToken();
       if (isTokenValid) {
         setIsLoading(false);
         setIsLoggedIn(true);
