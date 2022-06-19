@@ -30,7 +30,7 @@ const App = () => {
   const isDebugging = false; //Enabling this will redirect the app to the DebugStack.
   const [Theme, setTheme] = React.useState(DarkTheme);                      //Default theme will be DarkTheme, This state will define the app theme.
   const [isLoading, setIsLoading] = React.useState(true);                   //This will define loading status, when it's switched on or off it will show or not the Splash screen
-  const [IsLoggedIn, setIsLoggedIn] = React.useContext(AuthContext);        //A context that will define the authentication status, if false, will show auth stack, else will show home stack
+  const [IsLoggedIn, setIsLoggedIn] = React.useContext(AuthContext);         //A context that will define the authentication status, if false, will show auth stack, else will show home stack
 
   //Loads the token and shows the Splash until app is loaded
   React.useEffect(() => {
@@ -61,7 +61,7 @@ const App = () => {
   return (
     <ThemeContext.Provider value={userTheme}>{/* Contains the current theme */}
       <NavigationContainer theme={Theme}>{/* Contians the navigation, used to navigate between screens */}
-        <AuthContext.Provider value={false}>{/* Contians the Authentication context, used to define if user is logged in or not */}
+        <AuthContext.Provider value={[IsLoggedIn, setIsLoggedIn]}>{/* Contians the Authentication context, used to define if user is logged in or not */}
           <PaperProvider theme={Theme}>{/* Contians the paper provider, used to theme paper components */}
             {isDebugging ? <DebugStack></DebugStack> : isLoading ? <Splash></Splash> : IsLoggedIn ? <HomeStack></HomeStack> : <AuthStack></AuthStack> /* Triple Ternary expression to control what stack to use or splash */}
           </PaperProvider>

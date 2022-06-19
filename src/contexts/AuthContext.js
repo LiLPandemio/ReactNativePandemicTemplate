@@ -1,7 +1,7 @@
-import React, { createContext, useState } from 'react'; //Default react native import and useState hook import
+import React, { createContext, useState } from 'react';
 
 export default ({ children }) => {
-    const [IsLoggedIn, setIsLoggedIn] = useState({});               //This will define is user is logged in or not dynamically
+    const [IsLoggedIn, setIsLoggedIn] = useState({});
     return (
         <AuthContext.Provider value={[IsLoggedIn, setIsLoggedIn]}>
             {children}
@@ -9,4 +9,4 @@ export default ({ children }) => {
     );
 }
 
-export const AuthContext = createContext(); //This will create and export the context
+export const AuthContext = createContext();
